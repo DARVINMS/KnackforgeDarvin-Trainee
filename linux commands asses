@@ -1,0 +1,174 @@
+1)Create a directory "Freshers"
+2) Create two sub folders in the "Freshers" folder
+i) Sep-03
+ii) Sep-04
+3) Create a text file "linux-cmds" in the folder "Sep-03"
+4) Write few lines of text in the text file "linux-cmds"
+5) Rename the folders 
+i) Sep-03 to Sep-03-2024
+ii) Sep-04 to Sep-04-2024
+6) Copy the linux-cmds file to "Sep-04-2024" folder
+7) Use commands to print the current working directory
+8) How do you search the specific text in the file.
+9) Display all running process in your system.
+10) How do you find a file in Linux?
+11) Print the current date time.
+12) List all files and folders in the "Freshers" folder
+13) Find your local ip of your system
+14) Check whether you have the internet access in your system.
+15) Use the commands to find out the "Freshers" folder size.
+----------------------------------------------------------------------output------------------------------------------------------------------------------------
+
+
+darvin-m@ThinkPad-E14-Gen-4:~$ # create directory
+darvin-m@ThinkPad-E14-Gen-4:~$ cd Desktop
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ mkdir Freshers
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ # to create sub folders 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ cd Freshers
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ mkdir sep-03 sep-04 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ ls
+sep-03 sep-04
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ cd sep-03 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03$ 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03$ ls
+touch linux-cmds
+linux-cmds
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03$ #rename subfolder 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03$ cd ..
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ mv sep-03 sep-03-2024 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ mv sep-04 sep-04-2024
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ ls
+sep-03-2024 sep-04-2024
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ #copy file from one folder to another 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ cd sep-03-2024
+cp linux-cmds /home/darvin-m/Desktop/Freshers/sep-04-2024
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ cd .. 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ cd sep-04-2024
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-04-2024$ linux-cmds
+ls
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-04-2024$ #current working folder 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-04-2024$
+/home/darvin-m/Desktop/Freshers/sep-04-2024
+pwd
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-04-2024$ # write few lines
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-04-2024$ cd ..
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ cd sep-03-2024
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ cat >linux-cmds
+hello hi
+how are u
+im fine
+^C
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ grep how linux-cmds
+how are u
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ top
+
+PID USER PR 48675 darvin-m 20 37081 darvin-m 20 36819 darvin-m 20 39648 darvin-m 20
+NI
+VIRT
+SHR S 0 1159.2g 589544 146844 S 05494324 303088 135520 S
+RES
+%CPU %MEM
+TIME+ COMMAND
+8.9
+3.8
+5:46.56 chrome
+8.3
+1.9
+4:55.23 gnome-s+
+Θ
+934856 126872 76692 S
+6.9
+0.8
+3:51.14 Xorg
+Θ
+32.8g 263312 153416 S
+5.0
+1.7
+4:46.57 chrome
+61232 darvin-m 20
+Θ
+891712 54712 40952 S
+4.6
+0.4
+0:24.09 gnome-t+
+39496 darvin-m
+20
+Θ
+32.7g 493616 218816 S
+2.0
+3.2
+6:40.56 chrome
+61633 root
+20
+Θ
+Θ
+0
+Θ Ι
+1.0
+0.0
+0:01.74 kworker+
+0
+Θ
+13352 8132 Θ 994676
+4224
+3328 R
+0.7
+0.0
+0:00.12 top
+4788
+3776 S
+0.3
+0.0
+1:07.07 avahi-d+
+94480
+72840 S
+0.3
+0.6
+0:01.07 snapd-d+
+0 1266248
+92556
+70656 S
+0.3
+0.6
+0:02.26 xdg-des+
+Θ
+0
+0 1156.0g 211096 128428 S 0 1159.1g 154096 95312 S 0.3 1.0 64.4g 45324 31688 S 0.3 Θ Ι 0.3
+0.3
+1.4
+2:44.53 chrome
+0.3 0.0
+0:26.27 chrome 0:01.87 chrome 0:00.12 kworker+ 0:04.65 systemd 0:00.13 kthreadd
+61910 darvin-m 20 619 avahi 20 37176 darvin-m 20 37351 darvin-m 20 52688 darvin-m 20 53871 darvin-m 20 59334 darvin-m 20 Θ 61846 root 20 Θ 1 root 2 root
+Θ
+20 Θ 168032 13288 8336 S 0.0 0.1 20 0 Θ • S 0.0 0.0 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ # to find file 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers/sep-03-2024$ cd .. 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ find sep-03-2024
+sep-03-2024
+sep-03-2024/linux-cmds
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ # print date and time 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ date
+Wednesday 06 November 2024 01:59:00 PM IST
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ # to print all file and folder
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop/Freshers$ cd ..
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ ls -R Freshers
+Freshers:
+sep-03-2024 sep-04-2024
+Freshers/sep-03-2024:
+linux-cmds
+Freshers/sep-04-2024:
+linux-cmds
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ hostname -I
+10.0.4.78
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ # internet access checking 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ ping www.google.com
+PING www.google.com (142.250.182.68) 56(84) bytes of data.
+64 bytes from maa05s20-in-f4.1e100.net (142.250.182.68): icmp_seq=1 ttl=120 time=5.37 ms 64 bytes from maa05s20-in-f4.1e100.net (142.250.182.68): icmp_seq=2 ttl=120 time=50.1 ms 64 bytes from maa05s20-in-f4.1e100.net (142.250.182.68): icmp_seq=3 ttl=120 time=7.80 ms
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ # to find folder size 
+darvin-m@ThinkPad-E14-Gen-4:~/Desktop$ du -h Freshers
+8.0K Freshers/sep-03-2024
+4.0K 16K
+Freshers/sep-04-2024
+Freshers
